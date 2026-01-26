@@ -3,6 +3,12 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden bg-[var(--paper)] text-[var(--ink)]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(241,192,122,0.35),transparent_60%),radial-gradient(circle_at_30%_30%,rgba(30,111,92,0.12),transparent_55%),linear-gradient(120deg,rgba(201,109,79,0.18),transparent_40%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.25] mix-blend-multiply noise-overlay" />
+      <a
+        href="#main"
+        className="sr-only rounded-full bg-[var(--ink)] px-4 py-2 text-sm font-semibold text-[var(--paper)] focus:not-sr-only focus:absolute focus:left-6 focus:top-6 focus:z-20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--paper)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ink)]"
+      >
+        Skip to Content
+      </a>
 
       <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
         <div className="flex items-center gap-3">
@@ -17,64 +23,79 @@ export default function Home() {
           </div>
         </div>
         <nav className="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
-          <a href="#pricing" className="transition-colors hover:text-[var(--ink)]">
+          <a
+            href="#pricing"
+            className="transition-colors hover:text-[var(--ink)] focus-visible:underline focus-visible:text-[var(--ink)] focus-visible:outline-none motion-reduce:transition-none touch-manipulation"
+          >
             Pricing
           </a>
-          <a href="#process" className="transition-colors hover:text-[var(--ink)]">
+          <a
+            href="#process"
+            className="transition-colors hover:text-[var(--ink)] focus-visible:underline focus-visible:text-[var(--ink)] focus-visible:outline-none motion-reduce:transition-none touch-manipulation"
+          >
             Process
           </a>
-          <a href="#deliverables" className="transition-colors hover:text-[var(--ink)]">
+          <a
+            href="#deliverables"
+            className="transition-colors hover:text-[var(--ink)] focus-visible:underline focus-visible:text-[var(--ink)] focus-visible:outline-none motion-reduce:transition-none touch-manipulation"
+          >
             Deliverables
           </a>
-          <a href="#faq" className="transition-colors hover:text-[var(--ink)]">
+          <a
+            href="#faq"
+            className="transition-colors hover:text-[var(--ink)] focus-visible:underline focus-visible:text-[var(--ink)] focus-visible:outline-none motion-reduce:transition-none touch-manipulation"
+          >
             FAQ
           </a>
         </nav>
         <a
           href="#intake"
-          className="rounded-full border border-[var(--ink)] px-4 py-2 text-sm font-medium transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+          className="rounded-full border border-[var(--ink)] px-4 py-2 text-sm font-medium transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] motion-reduce:transition-none touch-manipulation"
         >
-          Get my MVP plan
+          Get My MVP Plan
         </a>
       </header>
 
-      <main className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-24 pt-8 lg:px-10 lg:pt-14">
+      <main
+        id="main"
+        className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 pb-24 pt-8 lg:px-10 lg:pt-14"
+      >
         <section className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="flex flex-col gap-6">
             <span className="w-fit rounded-full border border-[var(--line)] bg-white/70 px-4 py-1 text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
-              MVP development for solo founders
+              MVPs Shipped in Days, Not Months
             </span>
-            <h1 className="font-display text-4xl leading-tight text-[var(--ink)] md:text-5xl lg:text-6xl">
-              Build the MVP that proves demand, without hiring a team.
+            <h1 className="font-display text-4xl leading-tight text-[var(--ink)] text-balance md:text-5xl lg:text-6xl">
+              Ship a Production-Ready MVP in Days, Not Quarters.
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-[var(--muted)]">
-              For solo founders who need a real product in users' hands fast. We scope
-              the minimum, design the experience, and ship production-ready code you
-              can grow.
+              For solo founders who need a real product in users' hands fast. You get
+              tight scope, conversion-focused design, and a clean handoff so you can
+              keep shipping.
             </p>
             <div className="grid gap-4 text-sm text-[var(--ink)] sm:grid-cols-2">
               <div className="rounded-2xl border border-[var(--line)] bg-white/70 p-4">
-                <p className="font-semibold">Scope that stays tight</p>
+                <p className="font-semibold">48-Hour Scope Clarity</p>
                 <p className="mt-2 text-[var(--muted)]">
-                  We cut the noise and ship only what validates demand.
+                  A focused plan that keeps timelines in days, not months.
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--line)] bg-white/70 p-4">
-                <p className="font-semibold">Design that sells</p>
+                <p className="font-semibold">Design That Converts</p>
                 <p className="mt-2 text-[var(--muted)]">
-                  UI and UX crafted to convert early users into signals.
+                  UI and UX built to validate demand quickly.
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--line)] bg-white/70 p-4">
-                <p className="font-semibold">Builds that can grow</p>
+                <p className="font-semibold">Clean Handoff, No Debt</p>
                 <p className="mt-2 text-[var(--muted)]">
-                  Clean architecture and handoff docs so you keep momentum.
+                  Production-ready code + docs so you can keep shipping.
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--line)] bg-white/70 p-4">
-                <p className="font-semibold">One senior team</p>
+                <p className="font-semibold">One Senior Team</p>
                 <p className="mt-2 text-[var(--muted)]">
-                  Strategy, design, and engineering under one roof.
+                  Strategy, design, and engineering in one sprint cadence.
                 </p>
               </div>
             </div>
@@ -82,22 +103,22 @@ export default function Home() {
 
           <div
             id="intake"
-            className="rounded-3xl border border-[var(--line)] bg-white/85 p-6 shadow-[0_24px_60px_-40px_rgba(16,21,16,0.6)] backdrop-blur"
+            className="scroll-mt-24 rounded-3xl border border-[var(--line)] bg-white/85 p-6 shadow-[0_24px_60px_-40px_rgba(16,21,16,0.6)] backdrop-blur"
           >
             <div className="flex items-center justify-between">
               <p className="text-sm uppercase tracking-[0.2em] text-[var(--muted)]">
-                Start here
+                Start Here
               </p>
               <span className="rounded-full border border-[var(--line)] px-3 py-1 text-xs text-[var(--muted)]">
-                Fast scope + estimate
+                Fast Scope + Estimate
               </span>
             </div>
-            <h2 className="font-display text-2xl text-[var(--ink)]">
-              Get your MVP plan
+            <h2 className="font-display text-2xl text-[var(--ink)] text-balance">
+              Get Your MVP Plan
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-              Tell us the idea and we will reply with a clear scope outline and the
-              fastest path to launch.
+              Share the idea and get a clear scope outline with the fastest path to
+              launch.
             </p>
             <form className="mt-6 grid gap-4" method="post">
               <label className="grid gap-2 text-sm">
@@ -105,8 +126,9 @@ export default function Home() {
                 <input
                   name="name"
                   required
-                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(201,109,79,0.25)]"
-                  placeholder="Alex Rivera"
+                  autoComplete="off"
+                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(201,109,79,0.35)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none"
+                  placeholder="Alex Rivera…"
                 />
               </label>
               <label className="grid gap-2 text-sm">
@@ -115,16 +137,20 @@ export default function Home() {
                   type="email"
                   name="email"
                   required
-                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(201,109,79,0.25)]"
-                  placeholder="alex@company.com"
+                  inputMode="email"
+                  autoComplete="off"
+                  spellCheck={false}
+                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(201,109,79,0.35)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none"
+                  placeholder="alex@company.com…"
                 />
               </label>
               <label className="grid gap-2 text-sm">
                 <span className="font-medium">Company or project</span>
                 <input
                   name="company"
-                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(201,109,79,0.25)]"
-                  placeholder="Stealth health-tech startup"
+                  autoComplete="off"
+                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(201,109,79,0.35)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none"
+                  placeholder="Stealth health-tech startup…"
                 />
               </label>
               <label className="grid gap-2 text-sm">
@@ -133,15 +159,17 @@ export default function Home() {
                   name="overview"
                   required
                   rows={4}
-                  className="rounded-xl border border-[var(--line)] bg-white px-3 py-2 text-sm outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(201,109,79,0.25)]"
-                  placeholder="Marketplace for local clinics to manage overflow patients..."
+                  autoComplete="off"
+                  className="rounded-xl border border-[var(--line)] bg-white px-3 py-2 text-sm transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(201,109,79,0.35)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none"
+                  placeholder="Marketplace for local clinics to manage overflow patients…"
                 />
               </label>
               <label className="grid gap-2 text-sm">
                 <span className="font-medium">Target launch window</span>
                 <select
                   name="timeline"
-                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(201,109,79,0.25)]"
+                  autoComplete="off"
+                  className="h-11 rounded-xl border border-[var(--line)] bg-white px-3 text-sm transition-shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(201,109,79,0.35)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none"
                   defaultValue="4-8 weeks"
                 >
                   <option value="asap">ASAP</option>
@@ -152,12 +180,12 @@ export default function Home() {
               </label>
               <button
                 type="submit"
-                className="mt-2 h-12 rounded-full bg-[var(--ink)] text-sm font-semibold text-[var(--paper)] transition-transform hover:-translate-y-0.5"
+                className="mt-2 h-12 rounded-full bg-[var(--ink)] text-sm font-semibold text-[var(--paper)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none motion-reduce:hover:transform-none touch-manipulation"
               >
-                Get my MVP plan
+                Get My MVP Plan
               </button>
               <p className="text-xs text-[var(--muted)]">
-                No obligation. You will get a clear scope outline and next steps.
+                No obligation. Get a clear scope outline and next steps.
               </p>
             </form>
           </div>
@@ -165,26 +193,26 @@ export default function Home() {
 
         <section
           id="pricing"
-          className="grid gap-8 rounded-3xl border border-[var(--line)] bg-white/80 p-6"
+          className="grid gap-8 rounded-3xl border border-[var(--line)] bg-white/80 p-6 scroll-mt-24"
         >
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
-                Pricing anchors
+                Pricing Anchors
               </p>
-              <h2 className="mt-3 font-display text-3xl text-[var(--ink)]">
-                Know the range before we talk.
+              <h2 className="mt-3 font-display text-3xl text-[var(--ink)] text-balance">
+                Pricing Anchors, No Surprises.
               </h2>
               <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
-                The Scope Sprint is a fixed $500. Build packages start at $6,000, with
-                final pricing confirmed after scope.
+                Scope Sprint is fixed at $500 for a 48-hour plan. MVP builds start at
+                $6,000, with MVP + Mobile starting at $9,500 once scope is locked.
               </p>
             </div>
             <a
               href="#intake"
-              className="inline-flex h-11 items-center justify-center rounded-full border border-[var(--ink)] px-5 text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-[var(--ink)] px-5 text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] motion-reduce:transition-none touch-manipulation"
             >
-              Get a custom scope
+              Get a Custom Scope
             </a>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
@@ -192,34 +220,31 @@ export default function Home() {
               {
                 title: "Scope Sprint",
                 price: "$500",
-                kicker: "Fixed price",
-                description:
-                  "We align on the core flow, success metrics, and what gets cut.",
+                kicker: "48-Hour Plan",
+                description: "A fixed scope sprint to lock the plan and estimate.",
                 bullets: [
-                  "1-2 workshops + discovery",
-                  "Prioritized feature map",
-                  "Build-ready scope + estimate",
+                  "Core flow + success metrics",
+                  "Feature cut list + priorities",
+                  "Build-ready scope + timeline",
                 ],
               },
               {
                 title: "MVP Build",
                 price: "Starts at $6,000",
-                kicker: "Most common",
+                kicker: "Most Common",
                 featured: true,
-                description:
-                  "Design and build the web MVP that proves demand and converts.",
+                description: "Design and build the web MVP that validates demand fast.",
                 bullets: [
-                  "Product design + prototype",
-                  "Full-stack build + QA",
-                  "Launch checklist + handoff",
+                  "Product design + clickable prototype",
+                  "Full-stack build in days/weeks",
+                  "QA, launch, and clean handoff",
                 ],
               },
               {
                 title: "MVP + Mobile",
                 price: "Starts at $9,500",
-                kicker: "Web + mobile",
-                description:
-                  "Web MVP plus a mobile companion for iOS and Android users.",
+                kicker: "Web + Mobile",
+                description: "Web MVP plus a mobile companion for iOS + Android.",
                 bullets: [
                   "Unified design system",
                   "Cross-platform mobile build",
@@ -275,17 +300,17 @@ export default function Home() {
 
         <section className="grid gap-6 rounded-3xl border border-[var(--line)] bg-white/70 p-6 md:grid-cols-4">
           {[
-            "SaaS dashboards",
+            "SaaS Dashboards",
             "Marketplaces",
-            "AI copilots",
-            "Mobile companions",
+            "AI Copilots",
+            "Mobile Companions",
           ].map((item) => (
             <div key={item} className="text-sm text-[var(--muted)]">
               <span className="text-base font-semibold text-[var(--ink)]">
                 {item}
               </span>
               <p className="mt-2">
-                MVPs built for validation, onboarding, and early revenue.
+                Build MVPs for validation, onboarding, and early revenue.
               </p>
             </div>
           ))}
@@ -294,42 +319,39 @@ export default function Home() {
         <section className="grid gap-6 rounded-3xl border border-[var(--line)] bg-white/80 p-6 lg:grid-cols-[0.4fr_0.6fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
-              Proof of concept
+              Proof
             </p>
-            <h2 className="mt-3 font-display text-3xl text-[var(--ink)]">
-              Selected builds by Soya
+            <h2 className="mt-3 font-display text-3xl text-[var(--ink)] text-balance">
+              Selected Builds, Shipped Fast
             </h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              A few real products we have shipped end-to-end.
+              Mini case studies from recent MVP launches.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "The Quad Flow",
-                url: "https://thequadflow.com",
-                image: "/proof-quadflow.svg",
-                goal: "Turn scattered inbound tasks into a focused daily plan.",
-                built: "AI triage, unified inbox, and priority dashboard.",
-                timeline: "4 weeks",
-                stack: "Next.js + Supabase + OpenAI",
-              },
-              {
                 title: "SponsorSynq",
                 url: "https://sponsorsynq.com",
-                image: "/proof-sponsorsynq.svg",
-                goal: "Help event teams close sponsors faster.",
-                built: "Proposal builder, contract workflows, payment tracking.",
-                timeline: "5 weeks",
-                stack: "Next.js + Stripe + Supabase",
+                summary:
+                  "Built a sponsorship monetization MVP for event hosts in 10 days, with Stripe payments so hosts can start earning immediately.",
+                timeline: "10 days",
+                stack: "Next.js + Supabase + Stripe",
+              },
+              {
+                title: "The Quad Flow",
+                url: "https://thequadflow.com",
+                summary:
+                  "Shipped a productivity MVP in 3 days that auto-prioritizes tasks so users always know what to work on next.",
+                timeline: "3 days",
+                stack: "Next.js + Supabase + OpenAI",
               },
               {
                 title: "Djembe",
                 url: "https://djembe.tech",
-                image: "/proof-djembe.svg",
-                goal: "Sell exclusive beat packs with instant delivery.",
-                built: "Catalog, licensing checkout, creator dashboards.",
-                timeline: "4 weeks",
+                summary:
+                  "Delivered a music marketplace proof-of-concept in under 24 hours so creators could buy/sell beats and validate demand fast.",
+                timeline: "Under 24 hours",
                 stack: "Next.js + Stripe + Cloudflare",
               },
             ].map((project) => (
@@ -338,44 +360,26 @@ export default function Home() {
                 href={project.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-[var(--line)] bg-white/70 p-4 text-sm text-[var(--muted)] transition-transform hover:-translate-y-1 hover:border-[var(--ink)]"
+                className="group rounded-2xl border border-[var(--line)] bg-white/70 p-5 text-sm text-[var(--muted)] transition-transform hover:-translate-y-1 hover:border-[var(--ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none motion-reduce:hover:transform-none touch-manipulation"
               >
-                <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper)]">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} product screenshot`}
-                    className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div className="mt-4">
-                  <p className="text-base font-semibold text-[var(--ink)]">
-                    {project.title}
+                <p className="text-base font-semibold text-[var(--ink)]">
+                  {project.title}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
+                  {project.summary}
+                </p>
+                <div className="mt-4 space-y-2 text-xs text-[var(--muted)]">
+                  <p>
+                    <span className="font-semibold text-[var(--ink)]">
+                      Timeline:
+                    </span>{" "}
+                    {project.timeline}
                   </p>
-                  <ul className="mt-3 space-y-2 text-sm text-[var(--muted)]">
-                    <li>
-                      <span className="font-semibold text-[var(--ink)]">Goal:</span>{" "}
-                      {project.goal}
-                    </li>
-                    <li>
-                      <span className="font-semibold text-[var(--ink)]">
-                        Built:
-                      </span>{" "}
-                      {project.built}
-                    </li>
-                    <li>
-                      <span className="font-semibold text-[var(--ink)]">
-                        Timeline:
-                      </span>{" "}
-                      {project.timeline}
-                    </li>
-                  </ul>
-                  <p className="mt-3 text-xs text-[var(--muted)]">
+                  <p>
                     <span className="font-semibold text-[var(--ink)]">Stack:</span>{" "}
                     {project.stack}
                   </p>
-                  <p className="mt-3 text-xs text-[var(--muted)]">
-                    Visit: {project.url}
-                  </p>
+                  <p className="pt-1 text-[var(--ink)]">View Live →</p>
                 </div>
               </a>
             ))}
@@ -384,13 +388,13 @@ export default function Home() {
 
         <section className="grid gap-10 lg:grid-cols-[0.55fr_0.45fr]">
           <div className="space-y-6">
-            <h2 className="font-display text-3xl text-[var(--ink)]">
-              If you are building solo, momentum dies fast.
+            <h2 className="font-display text-3xl text-[var(--ink)] text-balance">
+              If You Are Building Solo, Momentum Dies Fast.
             </h2>
             <p className="text-[var(--muted)]">
               You are juggling product, design, and engineering alone. Freelancers
               slow you down, agencies bloat scope, and your idea stays stuck in
-              planning. We keep the focus on what proves demand.
+              planning. You need a tight focus on what proves demand.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               {[
@@ -409,11 +413,13 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-3xl border border-[var(--line)] bg-[var(--ink)] p-6 text-[var(--paper)]">
-            <h3 className="font-display text-2xl">Designed for high-intent search</h3>
+            <h3 className="font-display text-2xl text-balance">
+              Designed for High-Intent Search
+            </h3>
             <p className="mt-3 text-sm text-[rgba(247,241,232,0.72)]">
-              Founders searching for "MVP development agency," "build web app MVP," or
-              "mobile app MVP" land on a page that answers their questions and earns
-              trust fast.
+              Founders searching for “MVP development agency,” “build web app MVP,”
+              or “mobile app MVP” land on a page that answers their questions and
+              earns trust fast.
             </p>
             <ul className="mt-6 space-y-3 text-sm">
               <li>Clear offer and proof of focus</li>
@@ -423,22 +429,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="process" className="grid gap-8 lg:grid-cols-3">
+        <section id="process" className="grid gap-8 lg:grid-cols-3 scroll-mt-24">
           {[
             {
               label: "1. Scope Sprint",
               title: "Scope Sprint",
-              text: "We clarify the core flow, success metrics, and what gets cut. You leave with a build-ready plan.",
+              text: "Clarify the core flow, success metrics, and what gets cut. Leave with a build-ready plan.",
             },
             {
               label: "2. Design + Prototype",
               title: "Design + Prototype",
-              text: "Validate the experience before we write code. Visuals, UX, and clickable flows.",
+              text: "Validate the experience before code. Visuals, UX, and clickable flows.",
             },
             {
               label: "3. Build + Launch",
               title: "Build + Launch",
-              text: "Full-stack build, QA, and a clean handoff so you can keep moving.",
+              text: "Full-stack build, QA, and a clean handoff so you keep moving.",
             },
           ].map((step) => (
             <div
@@ -454,11 +460,16 @@ export default function Home() {
           ))}
         </section>
 
-        <section id="deliverables" className="grid gap-10 lg:grid-cols-[0.5fr_0.5fr]">
+        <section
+          id="deliverables"
+          className="grid gap-10 lg:grid-cols-[0.5fr_0.5fr] scroll-mt-24"
+        >
           <div className="space-y-6">
-            <h2 className="font-display text-3xl">What you get in every MVP build</h2>
+            <h2 className="font-display text-3xl text-balance">
+              What You Get in Every MVP Build
+            </h2>
             <p className="text-[var(--muted)]">
-              We focus on the minimum that proves value, then build in a way you can
+              Focus on the minimum that proves value, then build in a way you can
               scale after launch.
             </p>
             <div className="grid gap-3 text-sm text-[var(--muted)]">
@@ -479,7 +490,9 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-3xl border border-[var(--line)] bg-white/80 p-6">
-            <h3 className="font-display text-2xl">Built for founders like</h3>
+            <h3 className="font-display text-2xl text-balance">
+              Built for Founders Like
+            </h3>
             <div className="mt-6 grid gap-4">
               {[
                 {
@@ -510,11 +523,11 @@ export default function Home() {
         <section className="grid gap-6 lg:grid-cols-3">
           {[
             {
-              title: "Traditional agency",
+              title: "Traditional Agency",
               text: "Slow discovery, lots of meetings, large teams, and diluted outcomes.",
             },
             {
-              title: "Freelancer roulette",
+              title: "Freelancer Roulette",
               text: "Hard to coordinate design, strategy, and engineering without gaps.",
             },
             {
@@ -534,30 +547,33 @@ export default function Home() {
           ))}
         </section>
 
-        <section id="faq" className="grid gap-6 lg:grid-cols-[0.4fr_0.6fr]">
+        <section
+          id="faq"
+          className="grid gap-6 lg:grid-cols-[0.4fr_0.6fr] scroll-mt-24"
+        >
           <div>
-            <h2 className="font-display text-3xl">FAQ</h2>
+            <h2 className="font-display text-3xl text-balance">FAQ</h2>
             <p className="mt-3 text-sm text-[var(--muted)]">
-              Answering the most common questions we hear from solo founders.
+              Answering the most common questions solo founders ask.
             </p>
           </div>
           <div className="grid gap-4">
             {[
               {
-                q: "How fast can we launch?",
-                a: "Timelines depend on scope, but we build MVPs to ship in weeks, not quarters. You will get a clear timeline after the scope sprint.",
+                q: "How fast can you launch?",
+                a: "Timelines depend on scope, but you get an MVP that ships in weeks, not quarters. You receive a clear timeline after the scope sprint.",
               },
               {
                 q: "Do you build both web and mobile apps?",
-                a: "Yes. We build responsive web MVPs, mobile apps, or both depending on where your users are.",
+                a: "Yes. You can ship a responsive web MVP, a mobile app, or both depending on where your users are.",
               },
               {
                 q: "Do I need a team already?",
-                a: "No. We handle scope, design, and build, then hand off cleanly so you can keep going.",
+                a: "No. Scope, design, and build are handled end-to-end, with a clean handoff so you can keep going.",
               },
               {
                 q: "What if I am still validating the idea?",
-                a: "We can start with a lightweight prototype and validation plan before committing to a full build.",
+                a: "Start with a lightweight prototype and validation plan before committing to a full build.",
               },
             ].map((item) => (
               <div
@@ -574,19 +590,18 @@ export default function Home() {
         <section className="rounded-3xl border border-[var(--line)] bg-[var(--ink)] p-10 text-[var(--paper)]">
           <div className="grid gap-6 lg:grid-cols-[0.6fr_0.4fr] lg:items-center">
             <div>
-              <h2 className="font-display text-3xl">
-                Ready to ship a focused MVP?
+              <h2 className="font-display text-3xl text-balance">
+                Ready to Ship a Focused MVP?
               </h2>
               <p className="mt-3 text-sm text-[rgba(247,241,232,0.72)]">
-                Tell us the idea and we will reply with a clear scope and the fastest
-                path to launch.
+                Share the idea and get a clear scope with the fastest path to launch.
               </p>
             </div>
             <a
               href="#intake"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--paper)] px-6 text-sm font-semibold text-[var(--ink)] transition-transform hover:-translate-y-0.5"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--paper)] px-6 text-sm font-semibold text-[var(--ink)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--paper)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ink)] motion-reduce:transition-none motion-reduce:hover:transform-none touch-manipulation"
             >
-              Get my MVP plan
+              Get My MVP Plan
             </a>
           </div>
         </section>
