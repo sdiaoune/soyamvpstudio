@@ -17,6 +17,9 @@ export default function Home() {
           </div>
         </div>
         <nav className="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
+          <a href="#pricing" className="transition-colors hover:text-[var(--ink)]">
+            Pricing
+          </a>
           <a href="#process" className="transition-colors hover:text-[var(--ink)]">
             Process
           </a>
@@ -160,6 +163,116 @@ export default function Home() {
           </div>
         </section>
 
+        <section
+          id="pricing"
+          className="grid gap-8 rounded-3xl border border-[var(--line)] bg-white/80 p-6"
+        >
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
+                Pricing anchors
+              </p>
+              <h2 className="mt-3 font-display text-3xl text-[var(--ink)]">
+                Know the range before we talk.
+              </h2>
+              <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
+                The Scope Sprint is a fixed $500. Build packages start at $6,000, with
+                final pricing confirmed after scope.
+              </p>
+            </div>
+            <a
+              href="#intake"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-[var(--ink)] px-5 text-sm font-semibold text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)]"
+            >
+              Get a custom scope
+            </a>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                title: "Scope Sprint",
+                price: "$500",
+                kicker: "Fixed price",
+                description:
+                  "We align on the core flow, success metrics, and what gets cut.",
+                bullets: [
+                  "1-2 workshops + discovery",
+                  "Prioritized feature map",
+                  "Build-ready scope + estimate",
+                ],
+              },
+              {
+                title: "MVP Build",
+                price: "Starts at $6,000",
+                kicker: "Most common",
+                featured: true,
+                description:
+                  "Design and build the web MVP that proves demand and converts.",
+                bullets: [
+                  "Product design + prototype",
+                  "Full-stack build + QA",
+                  "Launch checklist + handoff",
+                ],
+              },
+              {
+                title: "MVP + Mobile",
+                price: "Starts at $9,500",
+                kicker: "Web + mobile",
+                description:
+                  "Web MVP plus a mobile companion for iOS and Android users.",
+                bullets: [
+                  "Unified design system",
+                  "Cross-platform mobile build",
+                  "Store-ready release support",
+                ],
+              },
+            ].map((tier) => (
+              <div
+                key={tier.title}
+                className={`rounded-2xl border border-[var(--line)] p-5 ${
+                  tier.featured
+                    ? "bg-[var(--ink)] text-[var(--paper)]"
+                    : "bg-white/80 text-[var(--ink)]"
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <p className="text-sm font-semibold">{tier.title}</p>
+                  <span
+                    className={`rounded-full border px-3 py-1 text-[10px] uppercase tracking-[0.2em] ${
+                      tier.featured
+                        ? "border-[rgba(247,241,232,0.4)] text-[rgba(247,241,232,0.72)]"
+                        : "border-[var(--line)] text-[var(--muted)]"
+                    }`}
+                  >
+                    {tier.kicker}
+                  </span>
+                </div>
+                <p className="mt-4 font-display text-2xl">{tier.price}</p>
+                <p
+                  className={`mt-3 text-sm ${
+                    tier.featured
+                      ? "text-[rgba(247,241,232,0.7)]"
+                      : "text-[var(--muted)]"
+                  }`}
+                >
+                  {tier.description}
+                </p>
+                <ul
+                  className={`mt-4 space-y-2 text-sm ${
+                    tier.featured
+                      ? "text-[rgba(247,241,232,0.75)]"
+                      : "text-[var(--muted)]"
+                  }`}
+                >
+                  {tier.bullets.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="grid gap-6 rounded-3xl border border-[var(--line)] bg-white/70 p-6 md:grid-cols-4">
           {[
             "SaaS dashboards",
@@ -190,22 +303,34 @@ export default function Home() {
               A few real products we have shipped end-to-end.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 title: "The Quad Flow",
                 url: "https://thequadflow.com",
-                note: "AI productivity tool that organizes tasks from email, calendar, and messages.",
+                image: "/proof-quadflow.svg",
+                goal: "Turn scattered inbound tasks into a focused daily plan.",
+                built: "AI triage, unified inbox, and priority dashboard.",
+                timeline: "4 weeks",
+                stack: "Next.js + Supabase + OpenAI",
               },
               {
                 title: "SponsorSynq",
                 url: "https://sponsorsynq.com",
-                note: "Event sponsorship platform for proposals, contracts, and payments.",
+                image: "/proof-sponsorsynq.svg",
+                goal: "Help event teams close sponsors faster.",
+                built: "Proposal builder, contract workflows, payment tracking.",
+                timeline: "5 weeks",
+                stack: "Next.js + Stripe + Supabase",
               },
               {
                 title: "Djembe",
                 url: "https://djembe.tech",
-                note: "Exclusive beats marketplace with MP3, WAV, stems, and MIDI packs.",
+                image: "/proof-djembe.svg",
+                goal: "Sell exclusive beat packs with instant delivery.",
+                built: "Catalog, licensing checkout, creator dashboards.",
+                timeline: "4 weeks",
+                stack: "Next.js + Stripe + Cloudflare",
               },
             ].map((project) => (
               <a
@@ -215,11 +340,43 @@ export default function Home() {
                 rel="noreferrer"
                 className="group rounded-2xl border border-[var(--line)] bg-white/70 p-4 text-sm text-[var(--muted)] transition-transform hover:-translate-y-1 hover:border-[var(--ink)]"
               >
-                <p className="text-base font-semibold text-[var(--ink)]">
-                  {project.title}
-                </p>
-                <p className="mt-2">{project.note}</p>
-                <p className="mt-3 text-xs text-[var(--muted)]">{project.url}</p>
+                <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper)]">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} product screenshot`}
+                    className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="mt-4">
+                  <p className="text-base font-semibold text-[var(--ink)]">
+                    {project.title}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-[var(--muted)]">
+                    <li>
+                      <span className="font-semibold text-[var(--ink)]">Goal:</span>{" "}
+                      {project.goal}
+                    </li>
+                    <li>
+                      <span className="font-semibold text-[var(--ink)]">
+                        Built:
+                      </span>{" "}
+                      {project.built}
+                    </li>
+                    <li>
+                      <span className="font-semibold text-[var(--ink)]">
+                        Timeline:
+                      </span>{" "}
+                      {project.timeline}
+                    </li>
+                  </ul>
+                  <p className="mt-3 text-xs text-[var(--muted)]">
+                    <span className="font-semibold text-[var(--ink)]">Stack:</span>{" "}
+                    {project.stack}
+                  </p>
+                  <p className="mt-3 text-xs text-[var(--muted)]">
+                    Visit: {project.url}
+                  </p>
+                </div>
               </a>
             ))}
           </div>

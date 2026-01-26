@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f1e8" />
+      <stop offset="100%" stop-color="#f4d8c9" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="url(#bg)" />
+  <rect x="70" y="80" width="1060" height="640" rx="36" fill="#ffffff" stroke="#e7dccd" />
+  <rect x="110" y="130" width="980" height="36" rx="18" fill="#c96d4f" opacity="0.2" />
+  <rect x="110" y="200" width="300" height="220" rx="24" fill="#f6eee3" stroke="#e7dccd" />
+  <rect x="440" y="200" width="300" height="220" rx="24" fill="#f6eee3" stroke="#e7dccd" />
+  <rect x="770" y="200" width="300" height="220" rx="24" fill="#f6eee3" stroke="#e7dccd" />
+  <rect x="110" y="460" width="960" height="190" rx="24" fill="#f6eee3" stroke="#e7dccd" />
+  <text x="130" y="255" font-family="Arial, sans-serif" font-size="18" fill="#4f584f">Beat pack</text>
+  <text x="460" y="255" font-family="Arial, sans-serif" font-size="18" fill="#4f584f">Exclusive drop</text>
+  <text x="800" y="255" font-family="Arial, sans-serif" font-size="18" fill="#4f584f">Producer kit</text>
+  <text x="130" y="520" font-family="Arial, sans-serif" font-size="20" fill="#4f584f">Instant delivery + licensing checkout</text>
+  <text x="120" y="160" font-family="Arial, sans-serif" font-size="18" fill="#101510">Djembe</text>
+</svg>
