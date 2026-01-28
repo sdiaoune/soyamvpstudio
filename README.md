@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment Variables
+
+Create a `.env.local` file (and set the same values in Vercel):
+
+```bash
+NEXT_PUBLIC_STRIPE_LEAD_GEN_PLAN_URL="https://buy.stripe.com/..."
+```
+
+Optional (if you create Stripe success/cancel redirects): point your Payment Link to:
+- `https://soyamvpstudio.vercel.app/success`
+- `https://soyamvpstudio.vercel.app/cancel`
+
 ## Getting Started
 
 First, run the development server:
