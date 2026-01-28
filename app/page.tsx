@@ -1,4 +1,6 @@
 export default function Home() {
+  const leadGenPlanUrl = process.env.NEXT_PUBLIC_STRIPE_LEAD_GEN_PLAN_URL;
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-[var(--paper)] text-[var(--ink)]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(241,192,122,0.35),transparent_60%),radial-gradient(circle_at_30%_30%,rgba(30,111,92,0.12),transparent_55%),linear-gradient(120deg,rgba(201,109,79,0.18),transparent_40%)]" />
@@ -49,10 +51,12 @@ export default function Home() {
           </a>
         </nav>
         <a
-          href="#intake"
+          href={leadGenPlanUrl ?? "#pricing"}
+          target={leadGenPlanUrl ? "_blank" : undefined}
+          rel={leadGenPlanUrl ? "noreferrer" : undefined}
           className="rounded-full border border-[var(--ink)] px-4 py-2 text-sm font-medium transition-colors hover:bg-[var(--ink)] hover:text-[var(--paper)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--paper)] motion-reduce:transition-none touch-manipulation"
         >
-          Get My MVP Plan
+          Buy Lead Gen Plan ($99)
         </a>
       </header>
 
@@ -114,11 +118,14 @@ export default function Home() {
               </span>
             </div>
             <h2 className="font-display text-2xl text-[var(--ink)] text-balance">
-              Get Your MVP Plan
+              Get Your Lead Gen Plan
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-              Share the idea and get a clear scope outline with the fastest path to
-              launch.
+              Share your offer + audience and get a clear automation plan for capturing
+              and following up with leads.
+            </p>
+            <p className="mt-3 text-xs text-[var(--muted)]">
+              Already purchased a plan? Submit this form to start immediately.
             </p>
             <form className="mt-6 grid gap-4" method="post">
               <label className="grid gap-2 text-sm">
@@ -182,7 +189,7 @@ export default function Home() {
                 type="submit"
                 className="mt-2 h-12 rounded-full bg-[var(--ink)] text-sm font-semibold text-[var(--paper)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ink)] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none motion-reduce:hover:transform-none touch-manipulation"
               >
-                Get My MVP Plan
+                Request Lead Gen Plan
               </button>
               <p className="text-xs text-[var(--muted)]">
                 No obligation. Get a clear scope outline and next steps.
@@ -204,8 +211,9 @@ export default function Home() {
                 Pricing Anchors, No Surprises.
               </h2>
               <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
-                Scope Sprint is fixed at $500 for a 48-hour plan. MVP builds start at
-                $6,000, with MVP + Mobile starting at $9,500 once scope is locked.
+                Start with the <span className="font-semibold text-[var(--ink)]">$99 Lead Gen Plan</span>
+                (delivered in 24 hours). If you need a full product build, the Scope Sprint
+                is fixed at $500 for a 48-hour plan, and MVP builds start at $6,000.
               </p>
             </div>
             <a
@@ -217,6 +225,21 @@ export default function Home() {
           </div>
           <div className="grid gap-4 md:grid-cols-3">
             {[
+              {
+                title: "Lead Gen Plan",
+                price: "$99",
+                kicker: "24h Delivery",
+                featured: true,
+                description:
+                  "A fast, tactical plan to automate lead capture + follow-up for creators.",
+                bullets: [
+                  "Funnel map + automation steps",
+                  "3 outreach/follow-up scripts",
+                  "Build checklist + tool stack",
+                ],
+                ctaLabel: "Buy Lead Gen Plan ($99)",
+                ctaUrl: leadGenPlanUrl,
+              },
               {
                 title: "Scope Sprint",
                 price: "$500",
@@ -232,7 +255,6 @@ export default function Home() {
                 title: "MVP Build",
                 price: "Starts at $6,000",
                 kicker: "Most Common",
-                featured: true,
                 description: "Design and build the web MVP that validates demand fast.",
                 bullets: [
                   "Product design + clickable prototype",
@@ -293,6 +315,20 @@ export default function Home() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+                {tier.ctaLabel ? (
+                  <a
+                    href={tier.ctaUrl ?? "#intake"}
+                    target={tier.ctaUrl ? "_blank" : undefined}
+                    rel={tier.ctaUrl ? "noreferrer" : undefined}
+                    className={`mt-6 inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 motion-reduce:transition-none touch-manipulation ${
+                      tier.featured
+                        ? "bg-[var(--paper)] text-[var(--ink)] hover:bg-white focus-visible:ring-[var(--paper)] focus-visible:ring-offset-[var(--ink)]"
+                        : "bg-[var(--ink)] text-[var(--paper)] hover:bg-[rgba(16,21,16,0.92)] focus-visible:ring-[var(--ink)] focus-visible:ring-offset-[var(--paper)]"
+                    }`}
+                  >
+                    {tier.ctaLabel}
+                  </a>
+                ) : null}
               </div>
             ))}
           </div>
@@ -598,10 +634,12 @@ export default function Home() {
               </p>
             </div>
             <a
-              href="#intake"
+              href={leadGenPlanUrl ?? "#pricing"}
+              target={leadGenPlanUrl ? "_blank" : undefined}
+              rel={leadGenPlanUrl ? "noreferrer" : undefined}
               className="inline-flex h-12 items-center justify-center rounded-full bg-[var(--paper)] px-6 text-sm font-semibold text-[var(--ink)] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--paper)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ink)] motion-reduce:transition-none motion-reduce:hover:transform-none touch-manipulation"
             >
-              Get My MVP Plan
+              Buy Lead Gen Plan ($99)
             </a>
           </div>
         </section>
